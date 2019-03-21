@@ -1,7 +1,7 @@
 <div class = "container">
   <h1>Repos</h1>
   <!-- List repositories and display username here! -->
-  <%= @username %>
+  <%= session[:username] %>
   <% @repos.each do |repo| %>
     <%= repo["name"] %><br>
   <% end %>

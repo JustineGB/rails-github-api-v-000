@@ -11,7 +11,7 @@ class RepositoriesController < ApplicationController
         req.headers['Accept'] = 'application/json'
       end
     @repos = JSON.parse(resp.body)
-    @username = JSON.parse(user.body)['login']
+    session[:username] = JSON.parse(user.body)['login']
   end
 
   def create
