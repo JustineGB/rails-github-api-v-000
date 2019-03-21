@@ -21,7 +21,7 @@ class RepositoriesController < ApplicationController
       req.headers['Accept'] = 'application/json'
       req.body = { 'name': params[:name] }.to_json
     end
-    redirect_to '/'
+    redirect_to root_path
   end
 
 end
