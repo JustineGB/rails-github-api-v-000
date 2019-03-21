@@ -7,6 +7,7 @@ class RepositoriesController < ApplicationController
         req.headers['Accept'] = 'application/json'
       end
 
+
       @username = JSON.parse(user.body)['login']
 
       resp = Faraday.get('https://api.github.com/user/repos') do |req|
